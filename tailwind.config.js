@@ -70,7 +70,8 @@ export default {
         greyscale900: "#212121",
       },
       backgroundImage: {
-        loginBackground: "url('./src/assets/background1.jpg')"
+        loginBackground: "url('./src/assets/background1.jpg')",
+        registerBackground: "url('./src/assets/background2.jpg')"
       },
       margin: {
         '37px': '37px',

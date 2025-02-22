@@ -26,13 +26,13 @@ function LoginPage() {
           </fieldset>
 
           <div className="mt-9 flex justify-between items-center md:mt-5 w-full">
-              <p className="text-sm font-normal leading-[19.6px] tracking-[0.2px] text-textlightsecondary md:text-xs">
+              <p className="text-[14px] font-normal leading-[19.6px] tracking-[0.2px] text-textlightsecondary md:text-xs">
                 Belum punya akun?
                 <a href="/register" className="text-textlightprimary">
                   Daftar
                 </a>
               </p>
-              <a className="text-textlightprimary">
+              <a className="text-textlightprimary text-[16px]">
                 Lupa kata sandi?
               </a>
           </div>
