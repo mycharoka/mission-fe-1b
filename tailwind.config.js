@@ -15,6 +15,9 @@ export default {
       '16px': '16px',
     },
     extend: {
+      fontFamily: {
+        'sans': ['Lato', 'sans-serif']
+      },
       colors: {
         backgroundprimary: "#3254FF",
         backroungprimary100: "#243FDB",
@@ -71,7 +74,8 @@ export default {
       },
       backgroundImage: {
         loginBackground: "url('./src/assets/background1.jpg')",
-        registerBackground: "url('./src/assets/background2.jpg')"
+        registerBackground: "url('./src/assets/background2.jpg')",
+        heroGradient: "linear-gradient(to top, #181A1C, transparent)"
       },
       margin: {
         '37px': '37px',
