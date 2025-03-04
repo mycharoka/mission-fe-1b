@@ -7,12 +7,12 @@ export function Hero() {
       
     </div> */}
     <div className="flex flex-col gap-[10px] w-screen relative mt-[-300px] px-[80px] pb-[80px] bg-heroGradient">
-        <div className="w-auto border-green-500 border-2">
+        <div className="w-auto">
           <p className="font-bold text-textlightprimary text-[48px] leading-[52.8px]">Ao Ashi</p>
           <p className="font-medium text-[18px] leading-[25.2px] tracking-[0.2px] text-textlightprimary w-[668px] mt-[20px]">In an unfamiliar setting surrounded by talent, Ashito must bring out the best of his ability to prove himself and secure what could be a life-changing career.</p>
         </div>
         
-        <div className="flex  w-auto justify-between mt-[40px] border-blue-800 border-2">
+        <div className="flex  w-auto justify-between mt-[40px]">
           <div className="flex gap-[10px]">
             <button className="bg-backgroundprimary300 rounded-[48px] py-[10px] px-[26px] font-bold text-[16px] text-textlightprimary leading-[22.4px] tracking-[0.2px] border-none">Mulai</button>
             <button className="rounded-[48px] bg-paperbackground py-[10px] px-[26px] font-bold leading-[22.4px] tracking-[0.2px] text-textlightprimary border-none flex items-center content-center gap-[10px]">
