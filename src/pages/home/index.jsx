@@ -1,5 +1,4 @@
 // import { Footer } from "../../component/footer";
-import { data } from "autoprefixer";
 import { ContinueWatchList } from "../../component/continue-watch-list";
 import { Hero } from "../../component/hero";
 import MovieList from "../../component/movie-list";
