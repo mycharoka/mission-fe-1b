@@ -1,78 +1,50 @@
-// export function Footer() {
-//   return (
-//     <>
-//       <footer>
-//         <div className="flex flex-col gap-[26px]">
-//           <img src="../../../src/assets/Logo.png" alt="logo" className="" />
-//           <p className="font-normal text-[16px] leading-[20px]">@2024 Chill All Right Reserved.</p>
-//         </div>
-
-//         <div className="list-none text-textlightsecondary font-medium text-[16px] leading-[22.4px] tracking-[0.2px]">
-//           <p className="text-textlightprimary font-bold text-[16px] leading-[22.4px] tracking-[0.2px] mb-[15px]">Genre</p>
-//           <ul className="list-none text-textlightsecondary font-medium text-[16px] leading-[22.4px] tracking-0.2px grid grid-cols-[repeat(4, auto)] grid-rows-[repeat(4, auto)] grid-flow-col gap-x-px-[28px]">
-//           <li><a>Aksi</a></li>
-//             <li><a>Drama</a></li>
-//             <li><a>Fantasi Ilmiah & Fantasi</a></li>
-//             <li><a>Komedi</a></li>
-//             <li><a>Petualangan</a></li>
-//             <li><a>Thriller</a></li>
-//             <li><a>Perang</a></li>
-//             <li><a>Romantis</a></li>
-//             <li><a>KDrama</a></li>
-//             <li><a>Komedi</a></li>
-//             <li><a>Petualangan</a></li>
-//             <li><a>Perang</a></li>
-//             <li><a>Romantis</a></li>
-//             <li><a>Sains & Alam</a></li>
-//             <li><a>Thriller</a></li>
-//           </ul>
-//         </div>
-
-//         <div>
-//           <p>Bantuan</p>
-//           <ul>
-//           <li><a>FAQ</a></li>
-//             <li><a>Kontak Kami</a></li>
-//             <li><a>Privasi</a></li>
-//             <li><a>Syarat & Ketentuan</a></li>
-//           </ul>
-//         </div>
-//       </footer>
-//     </>
-//     )
-// }
+import { FooterListLink } from "../footer-list-link";
 
 export function Footer() {
   return (
-    <>
-    <footer className="bg-pageheaderbackground py-12 px-4 md:px-20 mt-auto">
-    <div className="container mx-auto flex flex-col md:flex-row justify-between gap-8">
-      <div className="flex flex-col gap-6">
-        <img src="../../../src/assets/Logo.png" alt="chill" className="w-32" />
-        <p className="text-textlightsecondary text-sm">@2023 Chill All Rights Reserved.</p>
-      </div>
-      
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div>
-          <h4 className="text-textlightprimary font-bold mb-4">Genre</h4>
-          <ul className="text-textlightsecondary text-sm space-y-2">
-            {['Aksi', 'Drama', 'Fantasi', 'Komedi', 'Petualangan', 'Thriller'].map((genre, i) => (
-              <li key={i}>{genre}</li>
-            ))}
-          </ul>
+    <footer className="bg-pageheaderbackground py-[60px] px-[80px] flex justify-between">
+
+      <div className="flex justify-center">
+
+        <div className="flex flex-col gap-[26px]">
+          <img src="../../../src/assets/Logo.png" alt="logo" className="w-[163px]" />
+          <p className="text-textlightsecondary font-normal text-[16px] leading-[20px]">@2023 Chill All Rights Reserved.</p>
         </div>
-        
-        <div>
-          <h4 className="text-textlightprimary font-bold mb-4">Bantuan</h4>
-          <ul className="text-textlightsecondary text-sm space-y-2">
-            {['FAQ', 'Kontak Kami', 'Privasi', 'Syarat & Ketentuan'].map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
+
+        <div className="flex justify-between">
+          <div className="list-none text-textlightsecondary font-medium text-[16px] leading-[22.4px] tracking-[0.2px] ">
+            <p className="text-textlightprimary font-bold">Genre</p>
+
+              <ul className="grid grid-cols-[repeat(4, auto)] grid-rows-[repeat(4, auto)] gap-x-[28px]">
+                <FooterListLink name="Aksi"/>
+                <FooterListLink name="Anak-anak"/>
+                <FooterListLink name="Britania"/>
+                <FooterListLink name="Drama"/>
+                <FooterListLink name="Fantasi Ilmiah & Fantasi"/>
+                <FooterListLink name="Kejahatan"/>
+                <FooterListLink name="KDrama"/>
+                <FooterListLink name="Komedi"/>
+                <FooterListLink name="Petualangan"/>
+                <FooterListLink name="Perang"/>
+                <FooterListLink name="Romantis"/>
+                <FooterListLink name="Sains & Alam"/>
+                <FooterListLink name="Thriller"/>
+              </ul>
+            </div>
+
+
+          <div>
+            <p className="text-textlightprimary font-bold">Bantuan</p>
+            <ul className="list-none text-textlightsecondary font-medium text-[16px] leading-[22.4px] tracking-[0.2px] grid grid-cols-[repeat(4, auto)] grid-rows-[repeat(4, auto)] grid-flow-col gap-x-[28px]">
+              <FooterListLink name="FAQ"/>
+              <FooterListLink name="Kontak Kami"/>
+              <FooterListLink name="Privasi"/>
+              <FooterListLink name="Syarat & Ketentuan"/>
+            </ul>
+          </div>
+
         </div>
       </div>
-    </div>
-  </footer>
-  </>
+    </footer>
   )
 }

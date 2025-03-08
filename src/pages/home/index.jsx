@@ -1,9 +1,10 @@
-// import { Footer } from "../../component/footer";
+import { Footer } from "../../component/footer";
 import { ContinueWatchList } from "../../component/continue-watch-list";
 import { Hero } from "../../component/hero";
 import MovieList from "../../component/movie-list";
 import { Navbar } from "../../component/navbar";
 import dataImages from "../../data/image-lists";
+
 
 export default function HomePage() {
   return (
@@ -16,8 +17,7 @@ export default function HomePage() {
         <MovieList title="trending" placeholder="Film Trending" movies={dataImages.trending}/>
         <MovieList title="new-release" placeholder="Rilis Baru" movies={dataImages.newRelease}/>
       </main>
-      {/* <h1>PELER BENGKOK</h1> */}
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }

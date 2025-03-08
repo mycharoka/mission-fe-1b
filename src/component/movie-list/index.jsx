@@ -11,7 +11,6 @@ const settings = {
   slidesToScroll: 1
 }
 export default function MovieList(props) {
-  console.log(props)
   return (
     <section className="bg-pageheaderbackground py-[20px] px-[20px]">
       <div className="w-screen px-[80px]">
