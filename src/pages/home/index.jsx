@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <div className="h-screen bg-pageheaderbackground">
       <Navbar/>
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden bg-pageheaderbackground">
         <Hero/>
         <ContinueWatchList/>
         <MovieList title="top-rating" placeholder="Top Rating dan Series Hari Ini" movies={dataImages.topRating}/>

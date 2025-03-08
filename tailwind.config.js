@@ -92,6 +92,12 @@ export default {
       },
       padding: {
         '40px': '40px'
+      },
+      gridTemplateColumns: {
+        '4-auto': 'repeat(4, auto)',
+      },
+      gridTemplateRows: {
+        '4-auto': 'repeat(4, auto)',
       }
     },
   },
