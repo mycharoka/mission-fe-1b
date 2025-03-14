@@ -5,7 +5,7 @@ export function Hero() {
 
       <div className="flex flex-col gap-[10px] w-full relative mt-[-500px] h-[500px] px-[80px] pb-[80px] z-50  bg-heroGradient justify-end max-md:pl-[22px] max-md:pr-[18px] max-md:mt-[-800px] max-md:h-[800px] max-md:pb-[15px]">
 
-          <div className="w-auto  max-md:mt-[600px] max-md:pt">
+          <div className="w-auto  max-md:mt-[600px] max-md:pl-[20px]">
             <p className="font-bold text-textlightprimary text-[48px] max-md:text-[24px] ">Ao Ashi</p>
             <p className="font-medium text-[18px] tracking-[0.2px] text-textlightprimary w-[668px] mt-[20px] max-md:text-[12px] max-md:mt-[5px] max-md:w-[200px] ">In an unfamiliar setting surrounded by talent, Ashito must bring out the best of his ability to prove himself and secure what could be a life-changing career.</p>
           </div>
