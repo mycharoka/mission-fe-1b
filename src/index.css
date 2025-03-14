@@ -11,6 +11,11 @@
   font-family: 'Lato';
 }
 
+body {
+  background-color: #181A1C ;
+  min-height: 100vh;
+}
+
 html {
   height: 100vh;
 }
