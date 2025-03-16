@@ -49,6 +49,23 @@ const dataImages = {
     {
       img: '../../src/assets/trending-movies/dr_strange.png'
     },
+  ],
+  myList: [
+    {
+      img: '../../src/assets/trending-movies/dr_strange.png'
+    },
+    {
+      img: '../../src/assets/new-release/ted_lasso.png'
+    },
+    {
+      img: '../../src/assets/top-rating/mha.png'
+    },
+    {
+      img: '../../src/assets/top-rating/spiderman.png'
+    },
+    {
+      img: '../../src/assets/top-rating/suzume.png'
+    },
   ]
 }
 
