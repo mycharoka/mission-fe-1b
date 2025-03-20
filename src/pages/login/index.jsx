@@ -1,7 +1,25 @@
+import { useState } from "react"
 import { AuthSection } from "../../component/auth-section"
 import { FormInput } from "../../component/form-input"
+import { loginUser } from "../../api/login"
+import { useNavigate } from "react-router"
 
 function LoginPage() {
+  const navigate = useNavigate()
+  function handleLogin(e) {
+    e.preventDefault()
+    const data = {
+      username: e.target.username.value, 
+      password: e.target.password.value
+    }
+  
+    const loginProcess = loginUser(data)
+    console.log('login >> ', loginProcess)
+    if (loginProcess === 'success') {
+      navigate('/homepage')
+    }
+  }
+  
   return (
       <section className="
         bg-cover 
@@ -14,7 +32,7 @@ function LoginPage() {
         w-screen 
         bg-loginBackground
       ">
-        <form action="" className="w-[529px] h-auto rounded-[16px] bg-[rgba(24,26,28,0.84)] p-10 flex flex-col items-center max-md:w-[306px] max-md:p-6">
+        <form onSubmit={(e) => handleLogin(e)} action="" className="w-[529px] h-auto rounded-[16px] bg-[rgba(24,26,28,0.84)] p-10 flex flex-col items-center max-md:w-[306px] max-md:p-6">
           <img src="../../../src/assets/Logo.png" className="w-[163px] h-auto mb-[37px] max-md:h-[24px] max-md:w-[94px] max-md:mb-[20px]"></img>
 
           <h3 className="text-[32px] font-bold text-textlightprimary tracking-[0.2px] max-md:text-[18px]">Masuk</h3>
