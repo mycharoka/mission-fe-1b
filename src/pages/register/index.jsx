@@ -1,16 +1,34 @@
+import { useState } from "react"
 import { AuthSection } from "../../component/auth-section"
 import { FormInput } from "../../component/form-input"
+import { useEffect } from "react"
+import { registerUser } from "../../api/register"
+import { useNavigate } from "react-router"
+
+
 function RegisterPage() {
+  const navigate = useNavigate()
+  function handleRegister(e) {
+    e.preventDefault()
+    const data = {
+      username: e.target.username.value, 
+      password: e.target.password.value, 
+      password_confirmation: e.target.passwordConfirmation.value
+    }
+    
+    registerUser(data)
+    navigate('/')
+  }
   return (
     <section className="bg-registerBackground bg-cover bg-no-repeat bg-center flex justify-center items-center h-screen w-screen">
-      <form action="" className="bg-[rgba(24,26,28,0.84)] w-[529px] h-auto rounded-[16px] p-10 flex flex-col items-center max-md:w-[306px] max-md:p-6">
+      <form onSubmit={(e) => handleRegister(e)} className="bg-[rgba(24,26,28,0.84)] w-[529px] h-auto rounded-[16px] p-10 flex flex-col items-center max-md:w-[306px] max-md:p-6">
         <img src="../../../src/assets/Logo.png" alt="chillflix" className="w-[163px] h-auto mb-[37px] max-md:h-[24px] max-md:w-[94px] max-md:mb-[20px]"/>
         <h3 className="text-[32px] font-bold leading-[35.2px] text-textlightprimary tracking-[0.2px] max-md:text-[18px]">Daftar</h3>
         <p className="text-textlightprimary font-normal text-[16px] leading-[22.4px] tracking-[0.2px] mb-[37px] max-md:mb-[20px] max-md:text-[10px]">Selamat Datang!</p>
 
         <fieldset className="flex flex-col border-none gap-[37px] w-full max-md:gap-[20px]">
-          <FormInput id="username" label="Username" type="text" placeholder="Masukkan Username"/>
-          <FormInput id="password" label="Kata Sandi" type="password" placeholder="Masukkan Kata Sandi"/>
+          <FormInput id="username" label="Username" type="text" placeholder="Masukkan Username" />
+          <FormInput id="password" label="Kata Sandi" type="password" placeholder="Masukkan Kata Sandi" />
           <FormInput id="passwordConfirmation" label="Konfirmasi Kata Sandi" type="password" placeholder="Masukkan Kata Sandi"/>
         </fieldset>
 
