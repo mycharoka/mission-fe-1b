@@ -1,10 +1,25 @@
+import { useState } from "react";
 import { Footer } from "../../component/footer";
-import MovieList from "../../component/movie-list";
 import { Navbar } from "../../component/navbar";
 import { ProfileInput } from "../../component/profile-input";
-import dataImages from "../../data/image-lists";
+import { updateProfile } from "../../api/update-profile";
+import { deleteProfile } from "../../api/delete-profile";
+import { useNavigate } from "react-router";
 
 export default function ProfilePage() {
+  const navigate = useNavigate()
+  const getUserData = localStorage.getItem('user') || []
+  const parsedUserData = JSON.parse(getUserData)
+
+  const [username, setUsername] = useState(parsedUserData.username)
+  const [email, setEmail] = useState(parsedUserData.email)
+  const [password, setPassword] = useState(parsedUserData.password)
+
+  function deleteUserProfile() {
+    deleteProfile()
+    navigate('/')
+  }
+
   return (
     <>
       <Navbar/>
@@ -30,9 +45,9 @@ export default function ProfilePage() {
 
               {/* div untuk input */}
               <div className="mt-[32px] space-y-[12px]">
-                <ProfileInput field="Nama Lengkap" placeholder="Nama Lengkap Pengguna"/>
-                <ProfileInput field="Email" placeholder="Email Pengguna"/>
-                <ProfileInput field="Password" placeholder="Password Pengguna"/>
+                <ProfileInput field="Nama Lengkap" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <ProfileInput field="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <ProfileInput field="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
               </div>
               {/* div untuk input */}
 
@@ -53,7 +68,11 @@ export default function ProfilePage() {
             {/* div untuk berlangganan */}
 
           </div>
-          <button className="bg-backgroundprimary300 text-textlightprimary font-bold text-[16px] py-[10px] px-[26px] rounded-[48px]">Simpan</button>
+
+          <div className="space-x-80">
+            <button className="bg-backgroundprimary300 text-textlightprimary font-bold text-[16px] py-[10px] px-[26px] rounded-[48px]" onClick={() => updateProfile({username, email, password})}>Simpan</button>
+            <button className="bg-red-600 text-textlightprimary font-bold text-[16px] py-[10px] px-[26px] rounded-[48px]" onClick={() => deleteUserProfile()}>Hapus Akun</button>
+          </div>
         </div>
 
         <div className="mt-[40px]">

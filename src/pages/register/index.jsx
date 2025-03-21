@@ -1,7 +1,5 @@
-import { useState } from "react"
 import { AuthSection } from "../../component/auth-section"
 import { FormInput } from "../../component/form-input"
-import { useEffect } from "react"
 import { registerUser } from "../../api/register"
 import { useNavigate } from "react-router"
 
