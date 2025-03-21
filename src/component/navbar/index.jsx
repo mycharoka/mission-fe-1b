@@ -1,4 +1,9 @@
+import { useState } from "react"
+import { ProfileDropdown } from "../profile-dropdown"
+
 export function Navbar() {
+  const [isClick, setIsClick] = useState(false)
+
   return (
     <header className="bg-pageheaderbackground w-full z-[999] fixed px-[80px] py-[25px] max-md:px-[20px] max-md:py-[6px] max-md:h-[56px] max-md:w-screen max-md:z-[999]">
     <nav className="flex justify-between items-center  max-md:w-[350px]  max-md:py-[8px]">
@@ -22,7 +27,9 @@ export function Navbar() {
           src="../../../src/assets/Avatar.png" 
           alt="avatar" 
           className="w-[80px] h-auto max-md:w-[40px] max-md:mr-[20px]"
+          onClick={() => setIsClick(!isClick)}
         />
+        {isClick && <ProfileDropdown />}
     </nav>
   </header>
 
