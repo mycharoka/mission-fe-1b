@@ -31,7 +31,7 @@ function RegisterPage() {
         </fieldset>
 
         <div className="mt-9 flex justify-between items-center max-md:mt-[6px] w-full">
-          <p className="text-[14px] font-normal leading-[19.6px] tracking-[0.2px] text-textlightsecondary max-md:text-[10px]">Sudah punya akun? <a className="text-textlightprimary">Masuk</a></p>
+          <p className="text-[14px] font-normal leading-[19.6px] tracking-[0.2px] text-textlightsecondary max-md:text-[10px]">Sudah punya akun? <a className="text-textlightprimary" href="/">Masuk</a></p>
         </div>
 
         <AuthSection name="Daftar" googleAction="Daftar dengan Google"/>

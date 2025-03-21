@@ -12,7 +12,7 @@ export const registerUser = async(data) => {
    */
   const url = import.meta.env.VITE_MOCK_API
   const getUser = localStorage.getItem('user') || []
-  const parsedUser = JSON.parse(getUser)
+  const parsedUser = typeof getUser === 'string' ? JSON.parse(getUser) : []
 
   if (data.username === parsedUser.username) {
     alert('username sudah terdaftar')
@@ -31,6 +31,7 @@ export const registerUser = async(data) => {
   
   try {
     const response = await axios.post(`${url}/auth`, data)
+    console.log('res> ', response)
     if (response.status == 201) {
       localStorage.setItem('user', JSON.stringify(response.data))
       alert('User Berhasil Dibuat')
