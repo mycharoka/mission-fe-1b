@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { AuthSection } from "../../component/auth-section"
 import { FormInput } from "../../component/form-input"
 import { loginUser } from "../../api/login"
