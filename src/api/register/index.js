@@ -19,8 +19,8 @@ export const registerUser = async(data) => {
     return
   }
 
-  if (data.password.length === 0) {
-    alert('password harus diisi')
+  if (data.password.length === 0 || data.username.length === 0) {
+    alert('password atau username harus diisi')
     return
   }
 
