@@ -1,5 +1,9 @@
 {
   "rewrites": [
+<<<<<<< Updated upstream
     {"souce": "/(.*)", "destination": "/"}
+=======
+    {"source": "/(.*)", "destination": "/"}
+>>>>>>> Stashed changes
   ]
 }
