@@ -2,7 +2,7 @@ const subscriptionPackages = [
   {
     id: 'individual',
     title: 'Individu',
-    price: 'Rp 49.999/bulan',
+    price: 49999,
     accounts: '1 Akun',
     features: [
       'Tidak Ada Iklan',
@@ -13,7 +13,7 @@ const subscriptionPackages = [
   {
     id: 'duo',
     title: 'Berdua',
-    price: 'Rp 79.999/bulan',
+    price: 79999,
     accounts: '2 Akun',
     features: [
       'Tidak Ada Iklan',
@@ -24,7 +24,7 @@ const subscriptionPackages = [
   {
     id: 'family',
     title: 'Keluarga',
-    price: 'Rp 159.999/bulan',
+    price: 159999,
     accounts: '5-7 Akun',
     features: [
       'Tidak Ada Iklan',
