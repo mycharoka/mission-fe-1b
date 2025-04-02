@@ -25,29 +25,29 @@ export default function SubscriptionPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
           <div className="flex flex-col items-center">
-            <img src="../../../src/assets/subscription/download.png"/>
+            <img src="/assets/subscription/download.png"/>
             <p className="text-textlightsecondary font-bold text-[20px] text-center
                         ">Download Konten<br/>Pilihan</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="../../../src/assets/subscription/advertisements-off.png"/>
+            <img src="/assets/subscription/advertisements-off.png"/>
             <p className="text-textlightsecondary font-bold text-[20px] text-center
                         ">Tidak Ada Iklan</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="../../../src/assets/subscription/movie-roll.png"/>
+            <img src="/assets/subscription/movie-roll.png"/>
             <p className="text-textlightsecondary font-bold text-[20px] text-center">Tonton Semua Konten</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="../../../src/assets/subscription/video-4k-box.png"/>
+            <img src="/assets/subscription/video-4k-box.png"/>
             <p className="text-textlightsecondary font-bold text-[20px] text-center">Kualitas Maksimal<br/> Sampai Dengan 4K</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="../../../src/assets/subscription/tablet-cellphone.png"/>
+            <img src="/assets/subscription/tablet-cellphone.png"/>
             <p className="text-textlightsecondary font-bold text-[20px] text-center">Tonton di TV, Tablet,<br/> Mobile dan Laptop</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="../../../src/assets/subscription/message-reply-text.png"/>
+            <img src="/assets/subscription/message-reply-text.png"/>
             <p className="text-textlightsecondary font-bold text-[20px] text-center">Subtitle Untuk<br/> Pilihan Konten</p>
           </div>
         </div>
