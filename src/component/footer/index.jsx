@@ -7,7 +7,7 @@ export function Footer() {
       <div className="md:flex w-full justify-between">
 
         <div className="flex flex-col gap-[26px] max-md:gap-[12px]">
-          <img src="../../../src/assets/Logo.png" alt="logo" className="w-[163px] max-md:w-[84px]" />
+          <img src="/assets/Logo.png" alt="logo" className="w-[163px] max-md:w-[84px]" />
           <p className="text-textlightsecondary font-normal text-[16px] leading-[20px] max-md:text-[12px] max-md:mb-[40px]">@2023 Chill All Rights Reserved.</p>
         </div>
 
