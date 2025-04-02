@@ -8,6 +8,15 @@ export default function PaymentPage() {
   const selectedPackage = useSubscriptionStore(state => state.subscription)
   const [paymentMethod, setPaymentMethod] = useState('card')
   const [voucherCode, setVoucherCode] = useState('')
+  const adminPrice = 3000
+
+  const formatPrice = (price) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  };
+
+  const totalPrice = () => {
+    return (selectedPackage.price + 3000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
 
   // const paymentMethods = [
   //   {id: 'credit-card', name: 'Kartu Kredit/Debit'},
@@ -17,44 +26,34 @@ export default function PaymentPage() {
   // ]
 
   return (
-    <main className="flex-grow py-8 px-6 text-white">
+    <>
+      <Navbar/>
+      <main className="flex-grow p-28 text-white">
         <div className="container mx-auto max-w-5xl">
-          <h1 className="text-2xl font-bold mb-6">Ringkasan Pembayaran</h1>
+          <h1 className="text-[32px] font-bold mb-6">Ringkasan Pembayaran</h1>
           
           <div className="flex flex-col md:flex-row gap-6">
             {/* Left Column - Plan Selection */}
             <div className="w-full md:w-1/3">
-              <div className="bg-[#1a4db8] rounded-16px overflow-hidden">
+              <div className="bg-gradient-to-b from-blue-700 to-blue-500  rounded-16px overflow-hidden">
                 <div className="p-6">
-                  <h2 className="text-lg font-semibold mb-4">Individual</h2>
-                  <p className="text-sm mb-1">Mulai dari Rp49.990/bulan</p>
-                  <p className="text-sm mb-4">1 Akun</p>
+                  <h2 className="inline-block bg-gray-800 px-4 py-2 rounded-[999px] text-lg font-semibold mb-4">{selectedPackage.title}</h2>
+                  <p className="text-sm mb-1">Rp {formatPrice(selectedPackage.price)}/bulan</p>
+                  <p className="text-sm mb-4">{selectedPackage.accounts}</p>
                   
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-start">
-                      <svg className="h-4 w-4 text-white mt-0.5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm">Tidak ada iklan</span>
+                  {selectedPackage.features.map((feature, index) => (
+                    <div className="space-y-2 mb-2" key={index}>
+                      <div className="flex items-start">
+                        <span className="mr-2">✔️</span>
+                        <span className="text-sm">{feature}</span>
+                      </div>
                     </div>
-                    <div className="flex items-start">
-                      <svg className="h-4 w-4 text-white mt-0.5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm">Kualitas 720p</span>
-                    </div>
-                    <div className="flex items-start">
-                      <svg className="h-4 w-4 text-white mt-0.5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm">Download konten pilihan</span>
-                    </div>
-                  </div>
+                  ))}
                   
-                  <button className="w-full bg-white text-[#1a4db8] font-semibold py-2 rounded-md mb-2">
+                  <button className="bg-white text-blue-700 px-6 py-2 rounded-[999px] font-semibold mb-2 w-full">
                     Langganan
                   </button>
-                  <p className="text-xs text-center text-blue-200">Syarat dan Ketentuan Berlaku</p>
+                  <p className="text-[12px] text-center text-white">Syaran & ketentuan berlaku</p>
                 </div>
               </div>
             </div>
@@ -73,25 +72,20 @@ export default function PaymentPage() {
                       {paymentMethod === 'card' && <div className="w-3 h-3 bg-blue-500 rounded-full"></div>}
                     </div>
                     <div className="flex items-center space-x-1">
-                      <div className="h-5 w-8 bg-[#1a1f71] rounded-sm flex items-center justify-center text-white text-xs font-bold">VISA</div>
-                      <div className="h-5 w-8 flex items-center justify-center">
-                        <div className="w-5 h-5 relative">
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-3 h-3 bg-red-500 rounded-full opacity-80"></div>
-                          </div>
-                          <div className="absolute inset-0 flex items-center justify-center ml-2">
-                            <div className="w-3 h-3 bg-yellow-500 rounded-full opacity-80"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="h-5 w-8 bg-white rounded-sm flex items-center justify-center">
-                        <div className="text-[#0066b2] text-xs font-bold">JCB</div>
-                      </div>
-                      <div className="h-5 w-8 bg-[#016fd0] rounded-sm flex items-center justify-center text-white text-xs font-bold">
-                        AMEX
-                      </div>
+                      {/* VISA ICON */}
+                      <img src="/assets/payment-icons/visa.png" alt="visa" />
+                      
+                      {/* MASTERCARD ICON */}
+                      <img src="/assets/payment-icons/MASTERCARD.png" alt="mastercard" />
+
+                      {/* JCB ICON */}
+                      <img src="/assets/payment-icons/jcb.png" alt="jcb" />
+
+                      {/* AMEX ICON */}
+                      <img src="/assets/payment-icons/american_express.png" alt="amex" />
+
                     </div>
-                    <span className="ml-2 text-sm">Kartu Debit/Kredit</span>
+                    <span className="ml-7 text-[16px]">Kartu Debit/Kredit</span>
                   </div>
                   
                   {/* BCA Virtual Account Option */}
@@ -102,10 +96,8 @@ export default function PaymentPage() {
                     <div className="w-5 h-5 rounded-full border border-gray-400 mr-3 flex items-center justify-center">
                       {paymentMethod === 'bca' && <div className="w-3 h-3 bg-blue-500 rounded-full"></div>}
                     </div>
-                    <div className="h-5 w-5 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">
-                      BCA
-                    </div>
-                    <span className="text-sm">BCA Virtual Account</span>
+                    <img src="/assets/payment-icons/bca.png" alt="bca" />
+                    <span className="text-[16px] ml-2">BCA Virtual Account</span>
                   </div>
                 </div>
               </div>
@@ -121,7 +113,7 @@ export default function PaymentPage() {
                     value={voucherCode}
                     onChange={(e) => setVoucherCode(e.target.value)}
                   />
-                  <button className="ml-2 bg-gray-700 text-white px-4 py-2 rounded-md text-sm">
+                  <button className="ml-2 bg-gray-700 text-white px-4 py-2 rounded-[999px] text-sm">
                     Gunakan
                   </button>
                 </div>
@@ -133,22 +125,22 @@ export default function PaymentPage() {
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span>Paket Premium Individual</span>
-                    <span>Rp49.000</span>
+                    <span>Rp {formatPrice(selectedPackage.price)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Biaya Admin</span>
-                    <span>Rp3.000</span>
+                    <span>Rp {formatPrice(adminPrice)}</span>
                   </div>
                   <div className="flex justify-between font-bold pt-2 border-t border-gray-700">
                     <span>Total Pembayaran</span>
-                    <span>Rp52.000</span>
+                    <span>Rp {totalPrice()}</span>
                   </div>
                 </div>
               </div>
               
               {/* Pay Button */}
               <div>
-                <button className="bg-[#1a4db8] hover:bg-blue-800 text-white font-semibold py-2 px-8 rounded-md">
+                <button className="bg-[#1a4db8] hover:bg-blue-800 text-white font-semibold py-2 px-8 rounded-[999px]">
                   Bayar
                 </button>
               </div>
@@ -156,5 +148,7 @@ export default function PaymentPage() {
           </div>
         </div>
       </main>
+    </>
+    
   );
 }
