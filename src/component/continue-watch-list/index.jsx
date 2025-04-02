@@ -34,16 +34,16 @@ const settings = {
 
 const watchListImages = [
   {
-    img: '../../../src/assets/continue-watching/avatar.png'
+    img: '/assets/continue-watching/avatar.png'
   },
   {
-    img: '../../../src/assets/continue-watching/batman.png'
+    img: '/assets/continue-watching/batman.png'
   },
   {
-    img: '../../../src/assets/continue-watching/blue-lock.png'
+    img: '/assets/continue-watching/blue-lock.png'
   },
   {
-    img: '../../../src/assets/continue-watching/shazam.png'
+    img: '/assets/continue-watching/shazam.png'
   },
 ]
 export function ContinueWatchList() {
