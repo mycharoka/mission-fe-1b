@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { Navbar } from "../../component/navbar";
 import useSubscriptionStore from "../../store/subscriptionStore";
 import { useState } from "react";
+import { Footer } from "../../component/footer";
 
 export default function PaymentPage() {
   const navigate = useNavigate()
@@ -17,13 +18,6 @@ export default function PaymentPage() {
   const totalPrice = () => {
     return (selectedPackage.price + 3000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
-
-  // const paymentMethods = [
-  //   {id: 'credit-card', name: 'Kartu Kredit/Debit'},
-  //   {id: 'bank-transfer', name: 'Transfer Bank'},
-  //   {id: 'e-wallet', name: 'E-Wallet'},
-  //   {id: 'qris', name: 'QRIS'},
-  // ]
 
   return (
     <>
@@ -148,6 +142,7 @@ export default function PaymentPage() {
           </div>
         </div>
       </main>
+      <Footer/>
     </>
     
   );
