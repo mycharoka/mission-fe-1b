@@ -10,12 +10,12 @@ export function Navbar() {
       <div className="items-center flex gap-20 max-md:gap-[12px]">
         <a href="/homepage">
           <img 
-            src="../../../src/assets/Logo.png" 
+            src="/assets/Logo.png" 
             alt="chill" 
             className="w-32 hidden md:block"
           />
           <img
-            src="../../../src/assets/mobile-logo.png"
+            src="/assets/mobile-logo.png"
             alt="chill-mobile"
             className="w-[20px] h-[18px] md:hidden"
           />
@@ -26,7 +26,7 @@ export function Navbar() {
 
       </div>
         <img 
-          src="../../../src/assets/Avatar.png" 
+          src="/assets/Avatar.png" 
           alt="avatar" 
           className="w-[80px] h-auto max-md:w-[40px] max-md:mr-[20px]"
           onClick={() => setIsClick(!isClick)}
