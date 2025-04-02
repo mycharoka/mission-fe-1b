@@ -74,7 +74,7 @@ export default {
       },
       backgroundImage: {
         loginBackground: "url('/assets/background1.jpg')",
-        registerBackground: "url('./src/assets/background2.jpg')",
+        registerBackground: "url('/assets/background2.jpg')",
         heroGradient: "linear-gradient(to top, #181A1C, transparent)"
       },
       margin: {
