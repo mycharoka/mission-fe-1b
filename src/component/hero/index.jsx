@@ -1,7 +1,7 @@
 export function Hero() {
   return (
     <section className="">
-      <img src="../../../src/assets/ao_ashi.jpg" alt="" className="w-full h-[500px] object-cover object-top mt-[90px] max-md:h-full max-md:mt-[50px]"/>
+      <img src="/assets/ao_ashi.jpg" alt="" className="w-full h-[500px] object-cover object-top mt-[90px] max-md:h-full max-md:mt-[50px]"/>
 
       <div className="flex flex-col gap-[10px] w-full relative mt-[-500px] h-[500px] px-[80px] pb-[80px] z-50  bg-heroGradient justify-end max-md:pl-[22px] max-md:pr-[18px] max-md:mt-[-800px] max-md:h-[800px] max-md:pb-[15px]">
 
@@ -20,7 +20,7 @@ export function Hero() {
               <p className="border-[1px] border-solid border-textlightprimary rounded-[24px] p-[10px] gap-[10px] w-[52px] font-normal text-[18px] tracking-[0.2px] text-textlightsecondary text-center max-md:p[5px] max-md:text-[12px] max-md:rounded-[20px]">14</p>
             </div>
 
-            <img src="../../../src/assets/muteIcon.png" alt="mute" className="bg-transparent bg-none max-md:hidden "/>
+            <img src="/assets/muteIcon.png" alt="mute" className="bg-transparent bg-none max-md:hidden "/>
           </div>
 
       </div>

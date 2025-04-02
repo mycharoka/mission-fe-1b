@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router";
 import { Navbar } from "../../component/navbar";
 import useSubscriptionStore from "../../store/subscriptionStore";
 import { useState } from "react";
 import { Footer } from "../../component/footer";
 
 export default function PaymentPage() {
-  const navigate = useNavigate()
   const selectedPackage = useSubscriptionStore(state => state.subscription)
   const [paymentMethod, setPaymentMethod] = useState('card')
   const [voucherCode, setVoucherCode] = useState('')
