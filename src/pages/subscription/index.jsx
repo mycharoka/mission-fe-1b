@@ -12,6 +12,11 @@ export default function SubscriptionPage() {
     setSelectedPackage(pkg)
     navigate('/payment')
   }
+
+  const formatPrice = (price) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  };
+
   return (
     <>
       <Navbar/>
@@ -56,7 +61,7 @@ export default function SubscriptionPage() {
           {subscriptionPackages.map((pkg) => (
             <div key={pkg.id} className="bg-gradient-to-b from-blue-700 to-blue-500 p-6 rounded-16px text-center text-white">
               <span className="inline-block bg-gray-800 px-4 py-2 rounded-[999px] font-semibold mb-4">{pkg.title}</span>
-              <p className="mb-6">Mulai dari {pkg.price}<br/>{pkg.accounts}</p>
+              <p className="mb-6">Mulai dari Rp {formatPrice(pkg.price)}/bulan<br/>{pkg.accounts}</p>
               <ul className="space-y-2 mb-6">
                 {pkg.features.map((feature, index) => (
                   <li key={index} className="flex items-center justify-center">
