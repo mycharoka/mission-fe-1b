@@ -5,6 +5,7 @@ import RegisterPage from './pages/register'
 import HomePage from './pages/home'
 import ProfilePage from './pages/profile'
 import SubscriptionPage from './pages/subscription'
+import PaymentPage from './pages/payment'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/homepage' element={<HomePage/>}/>
           <Route path='/profile' element={<ProfilePage/>}/>
           <Route path='/subscription' element={<SubscriptionPage/>}/>
+          <Route path='/payment' element={<PaymentPage/>}/>
         </Routes>
       </BrowserRouter>
     </>
