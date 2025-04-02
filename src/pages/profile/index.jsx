@@ -82,12 +82,12 @@ export default function ProfilePage() {
           </div>
 
           <div className="flex gap-[16px] mt-[32px]">
-            <img src="../../../src/assets/new-release/sonic.png" alt="" className="w-[200px]"/>
-            <img src="../../../src/assets/new-release/ted_lasso.png" alt=""  className="w-[200px]"/>
-            <img src="../../../src/assets/trending-movies/dr_strange.png" alt="" className="w-[200px]"/>
-            <img src="../../../src/assets/top-rating/suzume.png" alt="" className="w-[200px]"/>
-            <img src="../../../src/assets/trending-movies/bluelock.png" alt="" className="w-[200px]"/>
-            <img src="../../../src/assets/trending-movies/baymax.png" alt="" className="w-[200px]"/>
+            <img src="/assets/new-release/sonic.png" alt="" className="w-[200px]"/>
+            <img src="/assets/new-release/ted_lasso.png" alt=""  className="w-[200px]"/>
+            <img src="/assets/trending-movies/dr_strange.png" alt="" className="w-[200px]"/>
+            <img src="/assets/top-rating/suzume.png" alt="" className="w-[200px]"/>
+            <img src="/assets/trending-movies/bluelock.png" alt="" className="w-[200px]"/>
+            <img src="/assets/trending-movies/baymax.png" alt="" className="w-[200px]"/>
           </div>
         </div>
       </section>
