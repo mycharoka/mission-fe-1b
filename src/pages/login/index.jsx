@@ -32,7 +32,7 @@ function LoginPage() {
         bg-loginBackground
       ">
         <form onSubmit={(e) => handleLogin(e)} action="" className="w-[529px] h-auto rounded-[16px] bg-[rgba(24,26,28,0.84)] p-10 flex flex-col items-center max-md:w-[306px] max-md:p-6">
-          <img src="../../../src/assets/Logo.png" className="w-[163px] h-auto mb-[37px] max-md:h-[24px] max-md:w-[94px] max-md:mb-[20px]"></img>
+          <img src="assets/Logo.png" className="w-[163px] h-auto mb-[37px] max-md:h-[24px] max-md:w-[94px] max-md:mb-[20px]"></img>
 
           <h3 className="text-[32px] font-bold text-textlightprimary tracking-[0.2px] max-md:text-[18px]">Masuk</h3>
 

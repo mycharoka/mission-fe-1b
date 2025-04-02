@@ -73,7 +73,7 @@ export default {
         greyscale900: "#212121",
       },
       backgroundImage: {
-        loginBackground: "url('./src/assets/background1.jpg')",
+        loginBackground: "url('/assets/background1.jpg')",
         registerBackground: "url('./src/assets/background2.jpg')",
         heroGradient: "linear-gradient(to top, #181A1C, transparent)"
       },
