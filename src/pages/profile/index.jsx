@@ -32,11 +32,11 @@ export default function ProfilePage() {
 
               {/* div untuk photo */}
               <div className="flex items-center gap-[24px]">
-                <img src="../../../src/assets/profile-picture.png" alt="profile-picture" className="w-[140px]" />
+                <img src="/assets/profile-picture.png" alt="profile-picture" className="w-[140px]" />
                 <div className="space-y-[8px]">
                   <button className="px-[22px] py-[10px] border-solid border-[1px] border-[#3254FF] font-bold text-[16px] text-[#3254FF] tracking-0.2px rounded-[48px]" type="button">Ubah Foto</button>
                   <div className="flex gap-[4px]">
-                    <img src="../../../src/assets/file-upload.png" alt="file-upload" />
+                    <img src="/assets/file-upload.png" alt="file-upload" />
                     <p className="text-textlightsecondary text-[14px] tracking-0.2px font-normal">Maksimal 2TB</p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export default function ProfilePage() {
             {/* div untuk berlangganan */}
             <div className="w-full bg-[#3D4142] rounded-[12px] p-[24px] h-fit flex flex-col gap-[20px] items-end">
               <div className="flex gap-[20px]">
-                <img src="../../../src/assets/Warning.png" alt="warning-sign" />
+                <img src="/assets/Warning.png" alt="warning-sign" />
                 <div>
                   <p className="font-bold text-[24px] text-textlightprimary">Saat ini anda belum berlangganan</p>
                   <p className="font-normal text-[18px] text-textlightsecondary">Dapatkan Akses Tak Terbatas ke Ribuan Film dan Series Kesukaan Kamu</p>
